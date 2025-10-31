@@ -13,16 +13,19 @@
     footer { background-color: #0d6efd; color: white; text-align: center; padding: 20px 0; }
     a { color: #0d6efd; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .project-card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
+    .project-card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>👋 Hi, I'm Mohanish Tripathi</h1>
     <p class="lead">AI/ML Engineer | Data Scientist | Full-Stack Developer</p>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="container">
     <h2>About Me</h2>
     <p>
@@ -31,36 +34,96 @@
     </p>
   </section>
 
+  <!-- Projects Dashboard Section -->
   <section id="projects" class="container">
     <h2>Projects</h2>
+    <p>Here are some of the mini apps and ML projects I’ve built for learning and experimentation:</p>
 
-    <div class="project-card">
-      <h4>🧠 Mask Detection using YOLOv5 & Faster R-CNN</h4>
-      <p>Developed an object detection pipeline to detect mask usage in real-time using YOLOv5 and Faster R-CNN on the Mask Wearing dataset.</p>
+    <div class="row">
+      <!-- EV Hub App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>⚡ EV Hub App</h5>
+          <p>App to locate nearby EV charging stations and view real-time availability.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- Fitness App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>💪 Fitness App</h5>
+          <p>Tracks workouts, calories, and progress using Flask backend and charts.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- Smart Farming App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>🌾 Smart Farming App</h5>
+          <p>IoT-based system predicting soil health and crop yield using ML models.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- To-Do List App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>🧾 To-Do List App</h5>
+          <p>Flask + SQLite CRUD app for managing daily tasks with a simple UI.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- Student Record System -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>🎓 Student Record System</h5>
+          <p>Manage student details, grades, and CRUD operations using Flask.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- Weather App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>🌤️ Weather App</h5>
+          <p>Displays live weather info using OpenWeather API and a clean interface.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- Mini Chat App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>💬 Mini Chat App</h5>
+          <p>Real-time chat application using Flask-SocketIO and WebSockets.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- Quote of the Day App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>📜 Quote of the Day App</h5>
+          <p>Fetches and displays an inspiring daily quote using a public API.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
+
+      <!-- File Upload App -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card h-100">
+          <h5>📂 File Upload App</h5>
+          <p>Simple file upload and management system using Flask and SQLite.</p>
+          <a href="#" target="_blank">🔗 View Project</a>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-      <h4>🩸 Blood Cell Segmentation using Mask R-CNN</h4>
-      <p>Implemented Mask R-CNN for segmenting and classifying blood cell images to assist in medical image analysis.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>🎨 Image Generation with GAN on MNIST</h4>
-      <p>Built a Generative Adversarial Network (GAN) to generate synthetic handwritten digits from the MNIST dataset.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>🧾 Flask CRUD To-Do App</h4>
-      <p>Created a CRUD-based web app using Flask and SQLite to manage daily tasks with a responsive Bootstrap UI.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>📊 Bisecting K-Means & ROCK Clustering</h4>
-      <p>Implemented hierarchical and categorical clustering algorithms from scratch to study similarity-based grouping.</p>
-    </div>
-
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="container">
     <h2>Skills</h2>
     <ul>
@@ -72,13 +135,15 @@
     </ul>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:mohanishtripathi@example.com">mohanishtripathi@example.com</a></p>
+    <p>Email: <a href="mailto:tripathimohanish@gmail.com">tripathimohanish@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/mohanishtripathi" target="_blank">github.com/mohanishtripathi</a></p>
     <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/mohanishtripathi</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Mohanish Tripathi | Built with ❤️ using GitHub Pages</p>
   </footer>
